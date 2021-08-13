@@ -2,7 +2,7 @@ terraform {
   required_providers {
     scalr = {
       source = "private-registry-18285.herokuapp.com/scalr/scalr"
-      version = "1.0.0"
+      version = "2.0.0"
     }
   }
 }
