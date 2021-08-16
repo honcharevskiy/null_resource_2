@@ -7,7 +7,7 @@ terraform {
     1password = {
       source = "milosbackonja/1password"
       version = "1.1.0"
-    }
+   }
   }
 }
 
