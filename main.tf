@@ -4,13 +4,19 @@ terraform {
       source = "terraform-provider.herokuapp.com/scalr/scalr"
       version = "2.1.0"
     }
+    scalr_2 = {
+      source = "terraform-provider.herokuapp.com/scalr/scalr"
+      version = "2.0.0"
+    }
+    scalr_3 = {
+      source = "terraform-provider.herokuapp.com/scalr/scalr"
+      version = "1.0.0"
+    }
+    scalr_4 = {
+      source = "terraform-provider.herokuapp.com/scalr/scalr"
+      version = "0.0.13"
+    }
   }
 }
 
-# provider scalr {
- # hostname = var.hostname
-  #token    = var.api_token
-#}
 
-resource null_resource "monorepo" {
-}
