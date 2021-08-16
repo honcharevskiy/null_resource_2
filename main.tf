@@ -12,6 +12,18 @@ terraform {
       source  = "nbering/ansible"
       version = "1.0.4"
     }
+    azuredevops = {
+      source = "microsoft/azuredevops"
+      version = "0.1.6"
+    }
+    archive = {
+      source = "safanaj/archive"
+      version = "2.0.1"
+    }
+    aws = {
+      source = "maddijoyce/aws"
+      version = "3.15.1"
+    }
 
   }
 }
