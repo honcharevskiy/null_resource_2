@@ -8,9 +8,9 @@ terraform {
       source  = "vancluever/acme"
       version = "2.5.3"
     }
-    aiven = {
-      source  = "juniorz/aiven"
-      version = "0.1.0"
+    ansible = {
+      source  = "nbering/ansible"
+      version = "1.0.4"
     }
 
   }
