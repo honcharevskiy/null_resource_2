@@ -8,17 +8,6 @@ terraform {
 }
 
 resource "null_resource" "foo" {
-
+    count = 5000
 }
 
-variable "first_variable" {
-}
-
-locals {
-    first_variable = var.first_variable
-   
-}
-
-output "foo" {
-   value = var.first_variable
-}
