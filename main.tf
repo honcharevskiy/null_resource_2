@@ -14,9 +14,8 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"]
 }
 resource "aws_instance" "ubuntu" {
-  #count = 5002
-  #ami                         = var.win_ami
-  ami           = data.aws_ami.ubuntu.id
+  count = 5002
+  ami                         = var.win_ami
   instance_type = var.instance_type1
   subnet_id     = var.subnet
 tags          = merge({ "Name" = format("m.honcharevskyi -> %s -> %s", substr("🤔🤷", 0, 1), data.aws_ami.ubuntu.name) }, var.tags)
