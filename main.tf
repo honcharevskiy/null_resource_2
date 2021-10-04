@@ -1,5 +1,5 @@
 provider "aws" {
- region = var.region
+ region = "us-east-2"
 }
 data "aws_ami" "ubuntu" {
   most_recent = true
@@ -17,7 +17,7 @@ resource "aws_instance" "ubuntu" {
   #count = 5002
   #ami                         = var.win_ami
   ami           = data.aws_ami.ubuntu.id
-  instance_type = var.instance_type1
+  instance_type = "t2.nano"
   subnet_id     = var.subnet
   tags          = merge({ "Name" = format("k.kotov-test -> %s -> %s", substr("🤔🤷", 0, 1), data.aws_ami.ubuntu.name) }, var.tags)
   timeouts {
