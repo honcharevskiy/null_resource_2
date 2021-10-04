@@ -19,7 +19,7 @@ resource "aws_instance" "ubuntu" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type1
   subnet_id     = var.subnet
-  tags          = merge({ "Name" = format("k.kotov-test -> %s -> %s", substr("🤔🤷", 0, 1), data.aws_ami.ubuntu.name) }, var.tags)
+tags          = merge({ "Name" = format("m.honcharevskyi -> %s -> %s", substr("🤔🤷", 0, 1), data.aws_ami.ubuntu.name) }, var.tags)
   timeouts {
     create = "9m"
     delete = "15m"
