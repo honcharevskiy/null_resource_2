@@ -7,7 +7,7 @@ variable "region" {
 }
 variable "tags" {
   type    = map(any)
-  default = { test-env-owner = "k.kotov" }
+default = { test-env-owner = "m.honcharevskyi" }
 }
 variable "instance_type1" {
   type    = string
