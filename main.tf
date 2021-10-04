@@ -18,7 +18,7 @@ resource "aws_instance" "ubuntu" {
   #ami                         = var.win_ami
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.nano"
-  subnet_id     = var.subnet
+  #subnet_id     = var.subnet
   tags          = merge({ "Name" = format("k.kotov-test -> %s -> %s", substr("🤔🤷", 0, 1), data.aws_ami.ubuntu.name) }, var.tags)
   timeouts {
     create = "9m"
