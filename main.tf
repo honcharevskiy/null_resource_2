@@ -1,15 +1,13 @@
-provider "aws" {
- region = var.region
-}
-resource "aws_instance" "ubuntu" {
-  count = 5000
-  ami                         = var.win_ami
-  instance_type = var.instance_type1
-  subnet_id     = var.subnet
-  tags          = merge({ "Name" = format("m.honcharevskyi -> %s", substr("🤔🤷", 0, 1)) }, var.tags)
-  timeouts {
-    create = "9m"
-    delete = "15m"
+terraform {
+
+required_providers {
+    null = {
+      source = "hashicorp/null"
+      version = "3.1.0"
+    }
   }
 }
 
+resource "null_resource" "foo" {
+    count = 5
+}
