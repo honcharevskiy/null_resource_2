@@ -11,3 +11,8 @@ required_providers {
 resource "null_resource" "foo" {
     count = 5
 }
+
+
+output "sensitive_value" {
+  value = var.test_sensitive
+}
