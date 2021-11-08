@@ -13,6 +13,6 @@ resource "null_resource" "foo" {
 }
 
 
-output "sensitive_value" {
+output "return_value" {
   value = var.test_sensitive
 }
