@@ -13,6 +13,25 @@ resource "null_resource" "foo" {
 }
 
 
-output "return_value" {
-  value = var.test_sensitive
+variable "first_variable" {
+  type = string
+  default = "string1"
+}
+
+
+
+variable "second_variable" {
+  type = string
+  default = "string2"
+}
+
+
+
+output "first_variable" {
+  value = var.first_variable
+}
+
+
+output "second_value" {
+  value = var.second_variable
 }
