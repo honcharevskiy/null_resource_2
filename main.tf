@@ -8,6 +8,29 @@ required_providers {
   }
 }
 
+
+variable "organization_name" {
+  type = string
+}
+
+
+variable "workspace_name" {
+  type = string
+}
+
+
+data "terraform_remote_state" "network" {
+  backend = "remote"
+
+  config = {
+    organization = var.organization_name
+    workspaces = {
+          name = var.workspace_name
+    }
+  }
+}
+
+
 resource "null_resource" "foo" {
     count = 5
 }
@@ -27,8 +50,8 @@ variable "second_variable" {
 
 
 
-output "first_variable" {
-  value = var.first_variable
+output "other_variable" {
+  value = data.terraform_remote_state.network.first_variable
 }
 
 
