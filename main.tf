@@ -51,7 +51,7 @@ variable "second_variable" {
 
 
 output "other_variable" {
-  value = data.terraform_remote_state.network.first_variable
+  value = data.terraform_remote_state.network.outputs.first_variable
 }
 
 
