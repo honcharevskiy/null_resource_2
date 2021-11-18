@@ -19,16 +19,16 @@ variable "workspace_name" {
 }
 
 
-data "terraform_remote_state" "network" {
-  backend = "remote"
-
-  config = {
-    organization = var.organization_name
-    workspaces = {
-          name = var.workspace_name
-    }
-  }
-}
+#data "terraform_remote_state" "network" {
+#  backend = "remote"
+#
+#  config = {
+#    organization = var.organization_name
+#    workspaces = {
+#          name = var.workspace_name
+#    }
+#  }
+#}
 
 
 resource "null_resource" "foo" {
@@ -50,9 +50,9 @@ variable "second_variable" {
 
 
 
-output "other_variable" {
-  value = data.terraform_remote_state.network.outputs.first_variable
-}
+#output "other_variable" {
+ # value = data.terraform_remote_state.network.outputs.first_variable
+#}
 
 
 output "second_value" {
